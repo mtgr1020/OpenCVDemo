@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Video Capture Example</title>
+		<style>
+			div input{
+				display: inline-block;
+				margin: 10px;
+				background-color: dodgerblue;
+			}
+			iframe{
+				width: 100%;
+				height: 1000px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<input type="button" value="demo1-渲染视频" frameSrc="demo1"></input>
+			<input type="button" value="demo2-视频捕获人脸" frameSrc="demo2"></input>
+			<input type="button" value="demo3-Haar检测" frameSrc="demo3"/>
+			<input type="button" value="测试websocket" frameSrc="demo4"/>
+		</div>
+		<iframe>
+			
+		</iframe>
+		<script type="application/javascript">
+			document.querySelectorAll('input').forEach(function(el){
+				el.addEventListener('click',function(ev){
+					document.querySelector('iframe').src = "html/" + ev.target.getAttribute('frameSrc') + ".html";
+				});
+			})
+		</script>
+	</body>
+
+</html>
